@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubstitutionCiphers", "SubstitutionCiphers.csproj", "{393C7FA4-8014-439A-8356-52DEB3231DAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{393C7FA4-8014-439A-8356-52DEB3231DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393C7FA4-8014-439A-8356-52DEB3231DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393C7FA4-8014-439A-8356-52DEB3231DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393C7FA4-8014-439A-8356-52DEB3231DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CFECA7A-E430-43DB-8440-9B6B451F4C54}
+	EndGlobalSection
+EndGlobal
