@@ -6,7 +6,7 @@ namespace VigenereCipher__Polyalphabetic_
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Insert the text you want to be encrypted and decrypted, please!");
+            Console.WriteLine("Insert the text you want to be encrypted, please!");
             string Text = Console.ReadLine();
             Console.WriteLine("\nInsert the keyword, please!");
             string Keyword = Console.ReadLine();
@@ -15,6 +15,5 @@ namespace VigenereCipher__Polyalphabetic_
             Console.WriteLine("\nEncrypted text is: "+ encrypted);
             Console.WriteLine("\nDecrypted text is: " + vigenere.Decrypt(encrypted));
         }
-
     }
 }

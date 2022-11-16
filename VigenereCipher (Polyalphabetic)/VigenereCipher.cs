@@ -11,18 +11,19 @@ namespace VigenereCipher__Polyalphabetic_
             Text = text;
             Keyword = keyword;
        }
-       
-       public string Encrypt()
+
+        public string Encrypt()
        {
-            string NewKeyword = KeyGenerator(Text, Keyword);
+            Keyword = KeyGenerator(Text, Keyword);
             string EncryptedText = "";
+            int letter;
             for (int i = 0; i < Text.Length; i++)
             {
                 if (Char.IsLetter(Text[i]))
                 {
-                    int letter = ((Text[i]) + NewKeyword[i]) % 26;
-                    letter += 'A';
-                    EncryptedText += (char)(letter);
+                        letter = ((Text[i]) + Keyword[i]) % 26;
+                        letter += 'A';
+                        EncryptedText += (char)(letter);
                 }
                 else
                     EncryptedText += Text[i];
@@ -32,15 +33,15 @@ namespace VigenereCipher__Polyalphabetic_
 
         public string Decrypt(string text)
         {
-            string NewKeyword = KeyGenerator(Text, Keyword);
             string DecryptedText = "";
-            for (int i = 0; i < text.Length && i<NewKeyword.Length; i++)
+            int letter;
+            for (int i = 0; i < text.Length && i<Keyword.Length; i++)
             {
                 if (Char.IsLetter(text[i]))
                 {
-                    int letter = (text[i] - NewKeyword[i] + 26) % 26;
-                    letter += 'A';
-                    DecryptedText += (char)(letter);
+                        letter = (text[i] - Keyword[i] + 26) % 26;
+                        letter += 'A';
+                        DecryptedText += (char)(letter);
                 }
                 else
                     DecryptedText += text[i];
