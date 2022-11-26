@@ -5,9 +5,6 @@ namespace JeffersonCipher
 {
     internal class Jefferson
     {
-        //public static int N { get; set; }
-        //public string Text { get; set; }
-        //public static int[] Disks = ShuflleN(N);
         public Jefferson()
         {
         }
