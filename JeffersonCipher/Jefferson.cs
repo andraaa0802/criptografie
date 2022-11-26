@@ -47,8 +47,8 @@ namespace JeffersonCipher
             
             int indexOfLetter=-1;
             Random rnd = new Random();
-            shift = rnd.Next(1, n);
-            Console.WriteLine(shift);
+            shift = rnd.Next(1, 25);
+            Console.WriteLine("The letters are shifted by "+shift);
             for (int i=0;i<n;i++)
             {
                 for (int j=0;j<26;j++)
@@ -62,9 +62,9 @@ namespace JeffersonCipher
                 if(indexOfLetter==25)
                     encrypted = encrypted.Append(disks[shift, numbers[i]-1]);
                 else
-                    encrypted = encrypted.Append(disks[indexOfLetter + shift, numbers[i]-1]);
+                    encrypted = encrypted.Append(disks[(indexOfLetter + shift)%26, numbers[i]-1]);
             }
-            Console.WriteLine(encrypted);
+            Console.WriteLine("Encrypted text is: "+encrypted);
             
         }
 
@@ -81,12 +81,12 @@ namespace JeffersonCipher
                         break;
                     }
                 }
-                if (indexOfLetter == 0)
-                    decrypted = decrypted.Append(disks[25-shift, numbers[i] - 1]);
+                if (indexOfLetter-shift < 0)
+                    decrypted = decrypted.Append(disks[26-Math.Abs(indexOfLetter-shift), numbers[i] - 1]);
                 else
                     decrypted = decrypted.Append(disks[indexOfLetter - shift, numbers[i] - 1]);
             }
-            Console.WriteLine(decrypted);
+            Console.WriteLine("Decrypted text is: "+decrypted);
         }
 
         private static string ShuffleAlphabet()

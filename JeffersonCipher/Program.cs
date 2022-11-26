@@ -14,11 +14,11 @@ namespace JeffersonCipher
                 Console.WriteLine("Text length should be equal with the number of disks!");
             else
             {
+                text = text.ToUpper();
                 Jefferson jefferson = new Jefferson();
                 jefferson.Encrypt(n,text);
                 jefferson.Decrypt(n);
             }
-
         }
     }
 }
